@@ -10,11 +10,11 @@ using namespace std;
 // Base class for game characters
 class Character {
 protected:
-    string name;
     int health;
     int attack;
 
 public:
+    string name;
     Character(const string& name, int health, int attack) : name(name), health(health), attack(attack) {}
 
     virtual void attackEnemy(Character& enemy) = 0; // Pure virtual function for attacking an enemy
