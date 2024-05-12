@@ -1,2 +1,2 @@
 # fun-learn
-Meant to learn various aspects of topics and building something fun.
+Meant to learn various aspects of different programming languages and building something fun.
