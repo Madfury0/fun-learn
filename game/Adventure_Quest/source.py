@@ -94,7 +94,6 @@ def main():
         print ("+" * width)
         print(f"You are in room {current_room + 1}:")
         print ("+" * width)
-        print (" ")
         print ("=" * width)
         print(room_descriptions[current_room])
         print ("=" * width)
