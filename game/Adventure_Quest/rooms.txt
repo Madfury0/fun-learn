@@ -1,10 +1,6 @@
-Room 1: You enter a dimly lit chamber. The air feels stale, and you hear the sound of dripping water echoing in the distance. You see a rusted sword lying on the ground.
-
-Room 2: As you move forward, you encounter a narrow corridor. The walls are covered in ancient runes, and you feel a sense of unease creeping over you. Suddenly, a group of bats swoops down from the ceiling.
-
-Room 3: You emerge into a large hall filled with statues of ancient warriors. The floor is littered with debris, and you sense movement in the shadows. A menacing growl echoes through the room, and you see a pair of glowing eyes staring at you from the darkness.
-
-Room 4: You find yourself in a maze of twisting passages. The walls seem to shift and change as you move, disorienting you. Suddenly, you hear the sound of footsteps approaching, and you realize you're not alone.
-
-Room 5: You reach the heart of the dungeon, where a fearsome dragon lies in wait. Its scales shimmer in the dim light, and its eyes blaze with fury. You steel yourself for the final battle.
+You enter a dimly lit chamber. The air feels stale, and you hear the sound of dripping water echoing in the distance. You see a rusted sword lying on the ground.
+As you move forward, you encounter a narrow corridor. The walls are covered in ancient runes, and you feel a sense of unease creeping over you. Suddenly, a group of bats swoops down from the ceiling.
+You emerge into a large hall filled with statues of ancient warriors. The floor is littered with debris, and you sense movement in the shadows. A menacing growl echoes through the room, and you see a pair of glowing eyes staring at you from the darkness.
+You find yourself in a maze of twisting passages. The walls seem to shift and change as you move, disorienting you. Suddenly, you hear the sound of footsteps approaching, and you realize you're not alone.
+You reach the heart of the dungeon, where a fearsome dragon lies in wait. Its scales shimmer in the dim light, and its eyes blaze with fury. You steel yourself for the final battle.
 
