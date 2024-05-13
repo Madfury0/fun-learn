@@ -1,6 +1,6 @@
 import random
 
-width = 50 #decorators
+width = 56 #decorators
 
 class Character:
     def __init__(self, name, health, attack):
