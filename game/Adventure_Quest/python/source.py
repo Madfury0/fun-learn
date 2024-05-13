@@ -1,5 +1,5 @@
 import aspects as asp
-from aspects import Player,Enemy,battle,get_random
+from aspects import Player,Enemy,battle,get_random,time
 
 width = 56 #decorators
 offset = 20
@@ -57,10 +57,12 @@ def main ():
             print ("=" * width)
             print(room_descriptions[current_room])
             print ("=" * width)
+            time.sleep(7)
 
             # Randomly encounter enemy in some rooms
             if get_random(1, 2) == 1:
                 enemy = enemy_spawn()
+                time.sleep(1)
 
                 battle(player, enemy)
 
