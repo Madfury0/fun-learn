@@ -1,4 +1,5 @@
 import random
+import time
 class  Character:
     def __init__(self, name, health, attack):
         self.name = name
@@ -29,9 +30,12 @@ class Enemy(Character):
 
 def battle(player, enemy):
     n = 1
+    width = 56
+    offset = 23
+    delay = 3
     while player.is_alive() and enemy.is_alive():
         print("-" * width)
-        print (f"                ROUND: {n}")
+        print (" " * offset,f"ROUND: {n}")
         player.display_status()
         enemy.display_status()
         print("-" * width)
@@ -39,6 +43,7 @@ def battle(player, enemy):
         #random damages per round
         player.attack = get_random (1,100)
         player.attack_enemy(enemy)
+        time.sleep(delay)
         if not enemy.is_alive():
             print( "•" * width)
             print(f"{enemy.name} defeated!")
@@ -55,12 +60,13 @@ def battle(player, enemy):
 
         enemy.attack = get_random (1,75)
         enemy.attack_enemy(player)
+        time.sleep(delay)
 
         if not player.is_alive():
             print ("`" * width)
             print(f"{player.name} was defeated!")
             enemy.display_status()
-            print("                  GAME OVER!!")
+            print(" " * offset,"YOU ARE DEAD!!")
             print ("`" * width)
             return
         n += 1
