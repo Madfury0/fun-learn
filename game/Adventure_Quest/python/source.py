@@ -1,91 +1,20 @@
-import random
+import aspects as asp
+from aspects import Player,Enemy,battle
 
 width = 56 #decorators
 
-class Character:
-    def __init__(self, name, health, attack):
-        self.name = name
-        self.health = health
-        self.attack = attack
-
-    def attack_enemy(self, enemy):
-        print(f"{self.name} attacks {enemy.name}!")
-        enemy.defend(self.attack)
-
-    def defend(self, damage):
-        if damage > self.health:
-            damage = self.health
-        self.health -= damage  
-        print(f"{self.name} takes {damage} damage!")
-
-    def display_status(self):
-        print(f"Name: {self.name}, Health: {self.health}")
-
-    def is_alive(self):
-        return self.health > 0
-
-class Player(Character):
-    pass
-
-class Enemy(Character):
-    pass
-
-def battle(player, enemy):
-    n = 1
-    while player.is_alive() and enemy.is_alive():
-        print("-" * width)
-        print (f"                ROUND: {n}")
-        player.display_status()
-        enemy.display_status()
-        print("-" * width)
-        #random damages per round
-        player.attack = get_random (1,100)
-        player.attack_enemy(enemy)
-
-        if not enemy.is_alive():
-            print( "•" * width)
-            print(f"{enemy.name} defeated!")
-            elixr = get_random(10, 60)
-            if 10 <= elixr <= 20:
-                print (f"Earned green elixr: +{elixr}hp")
-            elif 21 <= elixr <= 39:                                       print (f"Earned blue elixr: +{elixr}hp")
-            else:
-                print (f"Earned purple elixr: +{elixr}hp")
-            player.health += elixr
-            player.display_status()
-            return
-
-        enemy.attack = get_random (1,75)
-        enemy.attack_enemy(player)
-
-        if not player.is_alive():
-            print ("`" * width)
-            print(f"{player.name} was defeated!")
-            enemy.display_status()
-            print("                  GAME OVER!!")
-            print ("`" * width)
-            return
-        n += 1
-
-def get_random(min, max):
-    return random.randint(min, max)
-
-def read_rooms(filename):
-    with open(filename, 'r') as file:
-        return file.readlines()
-
 def main():
-    random.seed() # Seed random number generator
+    asp.random.seed() # Seed random number generator
 
     # Read room descriptions from file
-    room_descriptions = read_rooms("rooms.txt")
+    room_descriptions = asp.read_rooms("rooms.txt")
 
     # Create player character
     player_name = input("Enter your name: ")
     player = Player(player_name, 100,1)
 
     #create enemy character
-    enemy = Enemy("enemy", get_random(10,250),1)
+    enemy = Enemy("enemy", asp.get_random(10,250),1)
 
 
     # Game loop
@@ -99,7 +28,7 @@ def main():
         print ("=" * width)
 
         # Randomly encounter enemy in some rooms
-        if get_random(1, 2) == 1:
+        if asp.get_random(1, 2) == 1:
             enemy = Enemy("enemy", get_random(10,250),enemy.attack)
             if 10 <= enemy.health <= 49:
                 print ("~" * width)
